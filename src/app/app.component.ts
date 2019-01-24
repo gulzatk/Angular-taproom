@@ -9,6 +9,7 @@ import { Keg } from './models/keg.model';
 
 export class AppComponent {
   title: string = 'A list of our beers on tap!';
+  selectedKeg = null;
 
   masterKegList: Keg[] = [
 new Keg("coors", "dark", 5, 15),
@@ -17,9 +18,17 @@ new Keg("bud", "light", 7, 12),
   ];
 
   addKegToList(newKeg: Keg) {
-    console.log(newKeg);
     this.masterKegList.push(newKeg);
   }
 
+  editTask(clickedKeg) {
+    this.selectedKeg = clickedKeg;
+  }
+
+  EditingDone() {
+    this.selectedKeg = null;
+  }
+
   
+
 }

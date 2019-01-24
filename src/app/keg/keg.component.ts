@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Keg } from '../models/keg.model';
 
 @Component({
@@ -9,7 +9,8 @@ import { Keg } from '../models/keg.model';
 
 export class KegComponent {
   showDetails: boolean = false;
-  @Input() keg: Keg;
+  @Input() childKegList: Keg[];
+  // @Input() keg: Keg;
 
   clickFunc() {
     this.showDetails = !this.showDetails;

@@ -5,3 +5,6 @@
 <div *ngFor="let thisKeg of masterKegList">
   <app-keg [keg]="thisKeg"></app-keg>
 </div>
+
+<app-edit-keg [childSelectedKeg]="selectedKeg" (clickedDone)="EditingDone()"></app-edit-keg>
+<app-new-keg (sendTask)="addKegToList($event)"></app-new-keg>
