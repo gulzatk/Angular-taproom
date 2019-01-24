@@ -1,0 +1,11 @@
+<h1>Add a new keg.</h1>
+<label>Keg name:</label>
+<input type="text" #kegName>
+<label>Keg brand:</label>
+<input type="text" #kegBrand>
+<label>Keg price:</label>
+<input type="number" #kegPrice>
+<label>Alcohol content :</label>
+<input type="number" #alcoholContent>
+
+<button (click)="added(kegName.value, kegBrand.value, kegPrice.value, alcoholContent.value)">Add</button>

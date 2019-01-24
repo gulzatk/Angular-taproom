@@ -1,0 +1,4 @@
+<ul>
+  <li (click)="clickFunc()"><strong>{{keg.name}}</strong></li>
+  <div *ngIf="showDetails">${{keg.price}}, {{keg.brand}}, {{keg.alcoholContent}}%</div>
+</ul>
